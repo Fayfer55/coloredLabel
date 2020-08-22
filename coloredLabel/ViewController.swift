@@ -25,28 +25,31 @@ class ViewController: UIViewController {
         slidersChange()
         viewChange()
     }
-
+    
     @IBAction func redValueChange() {
         redValue.text = String(format: "%.2f", redSlider.value)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        updateColor()
     }
     @IBAction func greenValueChange() {
-         greenValue.text = String(format: "%.2f", greenSlider.value)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        greenValue.text = String(format: "%.2f", greenSlider.value)
+        updateColor()
     }
     @IBAction func blueValueChange() {
-         blueValue.text = String(format: "%.2f", blueSlider.value)
-        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+        blueValue.text = String(format: "%.2f", blueSlider.value)
+        updateColor()
     }
     
-      private func slidersChange () {
-          redSlider.minimumTrackTintColor = .red
-          greenSlider.minimumTrackTintColor = .green
-          blueSlider.minimumTrackTintColor = .cyan
-      }
-      private func viewChange () {
-          coloredView.layer.cornerRadius = 15
-      }
+    private func slidersChange () {
+        redSlider.minimumTrackTintColor = .red
+        greenSlider.minimumTrackTintColor = .green
+        blueSlider.minimumTrackTintColor = .cyan
+    }
+    private func viewChange () {
+        coloredView.layer.cornerRadius = 15
+    }
+    private func updateColor () {
+        coloredView.backgroundColor = UIColor(red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
+    }
 }
 
 
