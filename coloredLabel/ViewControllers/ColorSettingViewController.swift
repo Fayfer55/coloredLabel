@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ColorSettingViewController: UIViewController {
     @IBOutlet var redValue: UILabel!
     @IBOutlet var greenValue: UILabel!
     @IBOutlet var blueValue: UILabel!
@@ -20,10 +19,20 @@ class ViewController: UIViewController {
     
     @IBOutlet var coloredView: UIView!
     
+    var backgroundView: UIColor!
+    var redColorSlider: Float!
+    var greenColorSlider: Float!
+    var blueColorSlider: Float!
+    
+    var delegate: SaveColorDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         coloredView.layer.cornerRadius = 15
         slidersChange()
+        
+        updateTextValue()
         updateColor()
     }
     
@@ -31,13 +40,26 @@ class ViewController: UIViewController {
         redValue.text = String(format: "%.2f", redSlider.value)
         greenValue.text = String(format: "%.2f", greenSlider.value)
         blueValue.text = String(format: "%.2f", blueSlider.value)
+        
         updateColor()
+    }
+    
+    @IBAction func changeColorButton() {
+        delegate.changeColorBackground(redSlider.value,
+                                       greenSlider.value,
+                                       blueSlider.value)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     private func slidersChange() {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .cyan
+        
+        redSlider.value = redColorSlider
+        greenSlider.value = greenColorSlider
+        blueSlider.value = blueColorSlider
     }
     
     private func updateColor() {
@@ -46,4 +68,9 @@ class ViewController: UIViewController {
                                               blue: CGFloat(blueSlider.value), alpha: 1)
     }
     
+    private func updateTextValue() {
+        redValue.text = String(format: "%.2f", redColorSlider)
+        greenValue.text = String(format: "%.2f", greenColorSlider)
+        blueValue.text = String(format: "%.2f", blueColorSlider)
+    }
 }

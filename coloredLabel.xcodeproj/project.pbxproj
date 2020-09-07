@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		851C6C5224F0FEE300C187D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C6C5124F0FEE300C187D2 /* AppDelegate.swift */; };
 		851C6C5424F0FEE300C187D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C6C5324F0FEE300C187D2 /* SceneDelegate.swift */; };
-		851C6C5624F0FEE300C187D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C6C5524F0FEE300C187D2 /* ViewController.swift */; };
+		851C6C5624F0FEE300C187D2 /* ColorSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851C6C5524F0FEE300C187D2 /* ColorSettingViewController.swift */; };
 		851C6C5924F0FEE300C187D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851C6C5724F0FEE300C187D2 /* Main.storyboard */; };
 		851C6C5B24F0FEE500C187D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 851C6C5A24F0FEE500C187D2 /* Assets.xcassets */; };
 		851C6C5E24F0FEE500C187D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 851C6C5C24F0FEE500C187D2 /* LaunchScreen.storyboard */; };
+		852C4CAF2503C6730039BD73 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C4CAE2503C6730039BD73 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		851C6C4E24F0FEE300C187D2 /* coloredLabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coloredLabel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		851C6C5124F0FEE300C187D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		851C6C5324F0FEE300C187D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		851C6C5524F0FEE300C187D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		851C6C5524F0FEE300C187D2 /* ColorSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSettingViewController.swift; sourceTree = "<group>"; };
 		851C6C5824F0FEE300C187D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		851C6C5A24F0FEE500C187D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		851C6C5D24F0FEE500C187D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		851C6C5F24F0FEE500C187D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		852C4CAE2503C6730039BD73 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,48 @@
 		851C6C5024F0FEE300C187D2 /* coloredLabel */ = {
 			isa = PBXGroup;
 			children = (
-				851C6C5124F0FEE300C187D2 /* AppDelegate.swift */,
-				851C6C5324F0FEE300C187D2 /* SceneDelegate.swift */,
-				851C6C5524F0FEE300C187D2 /* ViewController.swift */,
-				851C6C5724F0FEE300C187D2 /* Main.storyboard */,
-				851C6C5A24F0FEE500C187D2 /* Assets.xcassets */,
-				851C6C5C24F0FEE500C187D2 /* LaunchScreen.storyboard */,
-				851C6C5F24F0FEE500C187D2 /* Info.plist */,
+				85617A2325039112007E0B0C /* ViewControllers */,
+				85617A22250390FA007E0B0C /* Storyboard */,
+				85617A252503916A007E0B0C /* Sources */,
+				85617A242503914A007E0B0C /* SupportingFiles */,
 			);
 			path = coloredLabel;
+			sourceTree = "<group>";
+		};
+		85617A22250390FA007E0B0C /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				851C6C5724F0FEE300C187D2 /* Main.storyboard */,
+				851C6C5C24F0FEE500C187D2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		85617A2325039112007E0B0C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				851C6C5524F0FEE300C187D2 /* ColorSettingViewController.swift */,
+				852C4CAE2503C6730039BD73 /* FirstViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		85617A242503914A007E0B0C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				851C6C5124F0FEE300C187D2 /* AppDelegate.swift */,
+				851C6C5324F0FEE300C187D2 /* SceneDelegate.swift */,
+				851C6C5F24F0FEE500C187D2 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		85617A252503916A007E0B0C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				851C6C5A24F0FEE500C187D2 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				851C6C5624F0FEE300C187D2 /* ViewController.swift in Sources */,
+				851C6C5624F0FEE300C187D2 /* ColorSettingViewController.swift in Sources */,
 				851C6C5224F0FEE300C187D2 /* AppDelegate.swift in Sources */,
 				851C6C5424F0FEE300C187D2 /* SceneDelegate.swift in Sources */,
+				852C4CAF2503C6730039BD73 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7F5MV2U5PR;
-				INFOPLIST_FILE = coloredLabel/Info.plist;
+				INFOPLIST_FILE = coloredLabel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7F5MV2U5PR;
-				INFOPLIST_FILE = coloredLabel/Info.plist;
+				INFOPLIST_FILE = coloredLabel/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
